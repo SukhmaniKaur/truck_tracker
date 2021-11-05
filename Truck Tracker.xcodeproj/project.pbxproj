@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD32273463AE003D996A /* AppDelegate.swift */; };
-		FA7CFD37273463AE003D996A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD36273463AE003D996A /* ViewController.swift */; };
 		FA7CFD3A273463AE003D996A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD38273463AE003D996A /* Main.storyboard */; };
 		FA7CFD3C273463B0003D996A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD3B273463B0003D996A /* Assets.xcassets */; };
 		FA7CFD3F273463B0003D996A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD3D273463B0003D996A /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		FA7CFD2F273463AE003D996A /* Truck Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Truck Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7CFD32273463AE003D996A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA7CFD36273463AE003D996A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7CFD39273463AE003D996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA7CFD3B273463B0003D996A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA7CFD3E273463B0003D996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,8 +95,11 @@
 		FA7CFD31273463AE003D996A /* Truck Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FABF42AF2735AE0A00DFA9E4 /* ProjectHelper */,
+				FABF42AB2735ADEF00DFA9E4 /* ViewModel */,
+				FABF42AA2735ADE900DFA9E4 /* View */,
+				FABF42A92735ADE000DFA9E4 /* Model */,
 				FA7CFD32273463AE003D996A /* AppDelegate.swift */,
-				FA7CFD36273463AE003D996A /* ViewController.swift */,
 				FA7CFD38273463AE003D996A /* Main.storyboard */,
 				FA7CFD3B273463B0003D996A /* Assets.xcassets */,
 				FA7CFD3D273463B0003D996A /* LaunchScreen.storyboard */,
@@ -123,6 +124,34 @@
 				FA7CFD56273463B1003D996A /* Info.plist */,
 			);
 			path = "Truck TrackerUITests";
+			sourceTree = "<group>";
+		};
+		FABF42A92735ADE000DFA9E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FABF42AA2735ADE900DFA9E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FABF42AB2735ADEF00DFA9E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FABF42AF2735AE0A00DFA9E4 /* ProjectHelper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProjectHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,7 +284,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA7CFD37273463AE003D996A /* ViewController.swift in Sources */,
 				FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
