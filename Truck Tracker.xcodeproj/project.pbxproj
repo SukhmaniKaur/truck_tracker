@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD32273463AE003D996A /* AppDelegate.swift */; };
-		FA7CFD35273463AE003D996A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD34273463AE003D996A /* SceneDelegate.swift */; };
 		FA7CFD37273463AE003D996A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD36273463AE003D996A /* ViewController.swift */; };
 		FA7CFD3A273463AE003D996A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD38273463AE003D996A /* Main.storyboard */; };
 		FA7CFD3C273463B0003D996A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD3B273463B0003D996A /* Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		FA7CFD2F273463AE003D996A /* Truck Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Truck Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7CFD32273463AE003D996A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FA7CFD34273463AE003D996A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA7CFD36273463AE003D996A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA7CFD39273463AE003D996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA7CFD3B273463B0003D996A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				FA7CFD32273463AE003D996A /* AppDelegate.swift */,
-				FA7CFD34273463AE003D996A /* SceneDelegate.swift */,
 				FA7CFD36273463AE003D996A /* ViewController.swift */,
 				FA7CFD38273463AE003D996A /* Main.storyboard */,
 				FA7CFD3B273463B0003D996A /* Assets.xcassets */,
@@ -260,7 +257,6 @@
 			files = (
 				FA7CFD37273463AE003D996A /* ViewController.swift in Sources */,
 				FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */,
-				FA7CFD35273463AE003D996A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +435,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = "Truck Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q233F3ZPX;
 				INFOPLIST_FILE = "Truck Tracker/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
