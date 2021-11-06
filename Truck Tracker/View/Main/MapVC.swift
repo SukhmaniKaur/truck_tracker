@@ -7,9 +7,14 @@
 
 import UIKit
 import GoogleMaps
+import SainiUtils
 
 class MapVC: UIViewController {
-
+    
+    private var locationManager = SainiLocationManager()
+    private var longitude: Double = Double()
+    private var latitude: Double = Double()
+    
     // OUTLETS
     @IBOutlet weak var mapView: GMSMapView!
     override func viewDidLoad() {
@@ -19,6 +24,15 @@ class MapVC: UIViewController {
     
     //MARK: - configUI
     private func configUI() {
+        if let currentLocation = locationManager.exposedLocation {
+            log.success("\(currentLocation)")/
+            mapView.isMyLocationEnabled = true
+            latitude = currentLocation.coordinate.latitude
+            longitude = currentLocation.coordinate.longitude
+            mapView.camera = GMSCameraPosition(latitude: latitude, longitude: longitude, zoom: 10)
+        } else {
+            self.view.sainiShowToast(message: "Kindly enable your location services.")
+        }
         
     }
     
