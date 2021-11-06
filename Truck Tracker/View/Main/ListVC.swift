@@ -9,15 +9,19 @@ import UIKit
 
 class ListVC: UIViewController {
 
+    // OUTLETS
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configUI()
     }
     
-
+    //MARK: - configUI
+    private func configUI() {
+        
+    }
+    
+    //MARK: - mapBtnIsPressed
     @IBAction func mapBtnIsPressed(_ sender: UIBarButtonItem) {
     }
-
 }
