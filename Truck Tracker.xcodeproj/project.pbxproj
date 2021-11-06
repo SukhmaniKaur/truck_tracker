@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		FA7CFD3F273463B0003D996A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD3D273463B0003D996A /* LaunchScreen.storyboard */; };
 		FA7CFD4A273463B1003D996A /* Truck_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD49273463B1003D996A /* Truck_TrackerTests.swift */; };
 		FA7CFD55273463B1003D996A /* Truck_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD54273463B1003D996A /* Truck_TrackerUITests.swift */; };
+		FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B02736DABE00DFA9E4 /* MapVC.swift */; };
+		FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */; };
 		FB301F0FA38A547FB9C879F2 /* Pods_Truck_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F98BB0BD04455DCC8E845 /* Pods_Truck_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +59,8 @@
 		FA7CFD50273463B1003D996A /* Truck TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Truck TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7CFD54273463B1003D996A /* Truck_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Truck_TrackerUITests.swift; sourceTree = "<group>"; };
 		FA7CFD56273463B1003D996A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABF43B02736DABE00DFA9E4 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,6 @@
 				E2BA60E06EB37AC0006B5CCC /* Pods-Truck TrackerTests.debug.xcconfig */,
 				10C48CAD96593BB1D2B5124E /* Pods-Truck TrackerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -177,6 +180,7 @@
 		FABF42AA2735ADE900DFA9E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FABF43B02736DABE00DFA9E4 /* MapVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,6 +195,7 @@
 		FABF42AF2735AE0A00DFA9E4 /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
+				FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -470,6 +475,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */,
+				FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */,
+				FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
