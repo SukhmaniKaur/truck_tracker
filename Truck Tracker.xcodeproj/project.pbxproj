@@ -18,6 +18,8 @@
 		FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B02736DABE00DFA9E4 /* MapVC.swift */; };
 		FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */; };
 		FABF43BB2736E21000DFA9E4 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43BA2736E21000DFA9E4 /* ListVC.swift */; };
+		FABF43C72736E32E00DFA9E4 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43C52736E32E00DFA9E4 /* ListCell.swift */; };
+		FABF43C82736E32E00DFA9E4 /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FABF43C62736E32E00DFA9E4 /* ListCell.xib */; };
 		FB301F0FA38A547FB9C879F2 /* Pods_Truck_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F98BB0BD04455DCC8E845 /* Pods_Truck_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		FABF43B02736DABE00DFA9E4 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		FABF43BA2736E21000DFA9E4 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		FABF43C52736E32E00DFA9E4 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		FABF43C62736E32E00DFA9E4 /* ListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		FA7CFD31273463AE003D996A /* Truck Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				FABF43C32736E30600DFA9E4 /* Xib's */,
 				FABF42AF2735AE0A00DFA9E4 /* ProjectHelper */,
 				FABF42AB2735ADEF00DFA9E4 /* ViewModel */,
 				FABF42AA2735ADE900DFA9E4 /* View */,
@@ -209,6 +214,23 @@
 				FABF43BA2736E21000DFA9E4 /* ListVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FABF43C32736E30600DFA9E4 /* Xib's */ = {
+			isa = PBXGroup;
+			children = (
+				FABF43C42736E31100DFA9E4 /* TableViewXib's */,
+			);
+			path = "Xib's";
+			sourceTree = "<group>";
+		};
+		FABF43C42736E31100DFA9E4 /* TableViewXib's */ = {
+			isa = PBXGroup;
+			children = (
+				FABF43C52736E32E00DFA9E4 /* ListCell.swift */,
+				FABF43C62736E32E00DFA9E4 /* ListCell.xib */,
+			);
+			path = "TableViewXib's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA7CFD3F273463B0003D996A /* LaunchScreen.storyboard in Resources */,
+				FABF43C82736E32E00DFA9E4 /* ListCell.xib in Resources */,
 				FA7CFD3C273463B0003D996A /* Assets.xcassets in Resources */,
 				FA7CFD3A273463AE003D996A /* Main.storyboard in Resources */,
 			);
@@ -488,6 +511,7 @@
 				FABF43BB2736E21000DFA9E4 /* ListVC.swift in Sources */,
 				FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */,
 				FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */,
+				FABF43C72736E32E00DFA9E4 /* ListCell.swift in Sources */,
 				FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
