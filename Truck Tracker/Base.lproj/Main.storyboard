@@ -49,6 +49,36 @@
             </objects>
             <point key="canvasLocation" x="870" y="60"/>
         </scene>
+        <!--Trucks-->
+        <scene sceneID="ffN-Vp-tgZ">
+            <objects>
+                <viewController id="7Qt-G3-cyh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ka1-ZW-0ie">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-uH-UgS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nvn-rk-1CE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ozg-uH-UgS" firstAttribute="leading" secondItem="Nvn-rk-1CE" secondAttribute="leading" id="PlW-YI-2i2"/>
+                            <constraint firstItem="ozg-uH-UgS" firstAttribute="top" secondItem="Nvn-rk-1CE" secondAttribute="top" id="S2P-RD-pxF"/>
+                            <constraint firstItem="Nvn-rk-1CE" firstAttribute="bottom" secondItem="ozg-uH-UgS" secondAttribute="bottom" id="Tcf-30-kUu"/>
+                            <constraint firstItem="Nvn-rk-1CE" firstAttribute="trailing" secondItem="ozg-uH-UgS" secondAttribute="trailing" id="w0Z-GB-3G5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Trucks" id="uvl-Bc-BxI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" id="Uvo-UC-e4f"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Zf-wG-5L3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="58"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="GGw-iy-6u7">
             <objects>
@@ -72,9 +102,33 @@
             </objects>
             <point key="canvasLocation" x="52.5" y="60.2112676056338"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1aw-4r-gvq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bg7-X4-gvS" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="vml-fv-SeO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.81176470590000005" green="0.37254901959999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Qt-G3-cyh" kind="relationship" relationship="rootViewController" id="0gC-vM-y7s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9S-d4-dZ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.25" y="58.098591549295776"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list" width="24" height="24"/>
+        <image name="map" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
