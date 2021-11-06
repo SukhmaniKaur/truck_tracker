@@ -43,5 +43,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationUsageDescription</key>
+	<string>We need to access your location to update the truck location.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need to access your location to update the truck location.</string>
 </dict>
 </plist>
