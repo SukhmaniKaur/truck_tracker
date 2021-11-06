@@ -25,6 +25,7 @@
 		FABF43E52736EE4300DFA9E4 /* TruckListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43E42736EE4300DFA9E4 /* TruckListingViewModel.swift */; };
 		FABF43EA2736EE4F00DFA9E4 /* Binding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43E92736EE4F00DFA9E4 /* Binding.swift */; };
 		FABF43EF2736F0E200DFA9E4 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43EE2736F0E200DFA9E4 /* Utility.swift */; };
+		FABF44072736F52E00DFA9E4 /* TruckListReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF44062736F52E00DFA9E4 /* TruckListReponse.swift */; };
 		FB301F0FA38A547FB9C879F2 /* Pods_Truck_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F98BB0BD04455DCC8E845 /* Pods_Truck_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		FABF43E42736EE4300DFA9E4 /* TruckListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListingViewModel.swift; sourceTree = "<group>"; };
 		FABF43E92736EE4F00DFA9E4 /* Binding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Binding.swift; sourceTree = "<group>"; };
 		FABF43EE2736F0E200DFA9E4 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		FABF44062736F52E00DFA9E4 /* TruckListReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruckListReponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 		FABF42A92735ADE000DFA9E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FABF44062736F52E00DFA9E4 /* TruckListReponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				FABF43E52736EE4300DFA9E4 /* TruckListingViewModel.swift in Sources */,
 				FABF43C72736E32E00DFA9E4 /* ListCell.swift in Sources */,
 				FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */,
+				FABF44072736F52E00DFA9E4 /* TruckListReponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

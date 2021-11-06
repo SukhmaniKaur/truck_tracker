@@ -32,3 +32,13 @@ enum MAIN_STORYBOARD: String {
 struct AppColors{
     static let LoaderColor =  #colorLiteral(red: 0.8117647059, green: 0.3725490196, blue: 0.3725490196, alpha: 1)
 }
+
+//MARK:- DocumentDefaultValues
+struct DocumentDefaultValues{
+    struct Empty{
+        static let string =  ""
+        static let int =  0
+        static let bool = false
+        static let double = 0.0
+    }
+}
