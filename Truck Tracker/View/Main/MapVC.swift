@@ -11,6 +11,7 @@ import SainiUtils
 
 class MapVC: UIViewController {
     
+    private var truckListVM: TruckListingViewModel = TruckListingViewModel()
     private var locationManager = SainiLocationManager()
     private var longitude: Double = Double()
     private var latitude: Double = Double()
@@ -33,7 +34,7 @@ class MapVC: UIViewController {
         } else {
             self.view.sainiShowToast(message: "Kindly enable your location services.")
         }
-        
+        truckListVM.fetchTruckInfoList()
     }
     
     //MARK: - listBtnIsPressed
