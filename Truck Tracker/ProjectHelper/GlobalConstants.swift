@@ -27,3 +27,8 @@ enum TABLE_VIEW_CELL: String {
 enum MAIN_STORYBOARD: String {
     case MapVC, ListVC
 }
+
+//MARK:- AppColors
+struct AppColors{
+    static let LoaderColor =  #colorLiteral(red: 0.8117647059, green: 0.3725490196, blue: 0.3725490196, alpha: 1)
+}

@@ -40,38 +40,10 @@ public class APIManager {
         return ["Content-Type":"application/json"]
     }
     
-    func getJsonHeaderWithToken() -> [String:String]{
-        if let token = UserDefaults.standard.value(forKey: USER_DEFAULT_KEYS.token.rawValue) as? String {
-            return ["Content-Type":"application/json", "Authorization": token]
-        }
-        else {
-            return ["Content-Type":"application/json", "Authorization":AppModel.shared.token]
-        }
-    }
-    
-    func getMultipartHeaderWithToken() -> [String:String]{
-        if let token = UserDefaults.standard.value(forKey: USER_DEFAULT_KEYS.token.rawValue) as? String {
-            return ["Content-Type":"multipart/form-data", "Authorization": token]
-        }
-        else {
-            return ["Content-Type":"multipart/form-data", "Authorization":AppModel.shared.token]
-        }
-    }
-    
-    func getx_www_orm_urlencoded() -> [String:String]{
-        if let token = UserDefaults.standard.value(forKey: USER_DEFAULT_KEYS.token.rawValue) as? String {
-            return ["Content-Type":"x-www-form-urlencoded", "Authorization": token]
-        }
-        else {
-            return ["Content-Type":"x-www-form-urlencoded", "Authorization":AppModel.shared.token]
-        }
-        
-    }
-    
     func networkErrorMsg()
     {
         log.error("You are not connected to the internet")/
-        displayToast("You are not connected to the internet")
+//        displayToast("You are not connected to the internet")
     }
     
     //MARK:- ERROR CODES
@@ -132,23 +104,15 @@ public class APIManager {
             }
         }
         
-        var headerParams :[String : String] = [String: String]()
-        var Params:[String: Any] = [String: Any]()
-        if isMultipart == true{
-            headerParams = getMultipartHeaderWithToken()
-            Params["data"] = toJson(params)
-        }
-        else{
-            headerParams  = getJsonHeaderWithToken()
-            Params = params
-        }
+        let headerParams: HTTPHeaders = HTTPHeaders.init([String : String]())
+        let Params:[String: Any] = [String: Any]()
+        
         log.success("WORKING_THREAD:->>>>>>> \(Thread.current.threadName)")/
         log.info("HEADERS: \(Log.stats()) \(headerParams)")/
         log.info("API: \(Log.stats()) \(api)")/
         log.info("PARAMS: \(Log.stats()) \(Params)")/
         
-        
-        Alamofire.request(api, method: .get, encoding: JSONEncoding.default, headers: headerParams).responseJSON { (response) in
+        AF.request(api, method: .get, encoding: JSONEncoding.default, headers: headerParams).responseJSON { (response) in
             
             DispatchQueue.main.async {
                 removeLoader()
@@ -156,7 +120,6 @@ public class APIManager {
             
             switch response.result {
             case .success:
-                log.result("\(String(describing: response.result.value))")/
                 log.ln("prettyJSON Start \n")/
                 log.result("\(String(describing: response.data?.sainiPrettyJSON))")/
                 log.ln("prettyJSON End \n")/
