@@ -17,6 +17,7 @@
 		FA7CFD55273463B1003D996A /* Truck_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD54273463B1003D996A /* Truck_TrackerUITests.swift */; };
 		FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B02736DABE00DFA9E4 /* MapVC.swift */; };
 		FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */; };
+		FABF43BB2736E21000DFA9E4 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF43BA2736E21000DFA9E4 /* ListVC.swift */; };
 		FB301F0FA38A547FB9C879F2 /* Pods_Truck_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69F98BB0BD04455DCC8E845 /* Pods_Truck_Tracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		FA7CFD56273463B1003D996A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABF43B02736DABE00DFA9E4 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		FABF43BA2736E21000DFA9E4 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +182,7 @@
 		FABF42AA2735ADE900DFA9E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FABF43B02736DABE00DFA9E4 /* MapVC.swift */,
+				FABF43BF2736E21800DFA9E4 /* Main */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -198,6 +200,15 @@
 				FABF43B52736DD2A00DFA9E4 /* GlobalConstants.swift */,
 			);
 			path = ProjectHelper;
+			sourceTree = "<group>";
+		};
+		FABF43BF2736E21800DFA9E4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FABF43B02736DABE00DFA9E4 /* MapVC.swift */,
+				FABF43BA2736E21000DFA9E4 /* ListVC.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABF43BB2736E21000DFA9E4 /* ListVC.swift in Sources */,
 				FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */,
 				FABF43B62736DD2A00DFA9E4 /* GlobalConstants.swift in Sources */,
 				FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */,

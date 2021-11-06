@@ -52,7 +52,7 @@
         <!--Trucks-->
         <scene sceneID="ffN-Vp-tgZ">
             <objects>
-                <viewController id="7Qt-G3-cyh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListVC" id="7Qt-G3-cyh" customClass="ListVC" customModule="Truck_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka1-ZW-0ie">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ozg-uH-UgS">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="7Qt-G3-cyh" id="Lso-Fc-6J6"/>
+                                    <outlet property="delegate" destination="7Qt-G3-cyh" id="bu0-EZ-ThA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nvn-rk-1CE"/>
@@ -72,8 +76,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trucks" id="uvl-Bc-BxI">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" id="Uvo-UC-e4f"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" id="Uvo-UC-e4f">
+                            <connections>
+                                <action selector="mapBtnIsPressed:" destination="7Qt-G3-cyh" id="Dqk-vP-TbB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ozg-uH-UgS" id="RHA-7E-1Y1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Zf-wG-5L3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
