@@ -44,7 +44,7 @@ struct TruckListInfo: Codable {
 
 // MARK: - LastRunningState
 struct LastRunningState: Codable {
-    let truckRunningState: Int
+    var truckRunningState: TRUCK_RUNNING_STATE = .running
     let stopStartTime: Int
 
     enum CodingKeys: String, CodingKey {
@@ -53,12 +53,14 @@ struct LastRunningState: Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        truckRunningState = try values.decodeIfPresent(Int.self, forKey: .truckRunningState) ?? DocumentDefaultValues.Empty.int
+        if let state = try values.decodeIfPresent(Int.self, forKey: .truckRunningState) {
+            truckRunningState = TRUCK_RUNNING_STATE(rawValue: state) ?? .running
+        }
         stopStartTime = try values.decodeIfPresent(Int.self, forKey: .stopStartTime) ?? DocumentDefaultValues.Empty.int
     }
     
     internal init() {
-        self.truckRunningState = DocumentDefaultValues.Empty.int
+        self.truckRunningState = .running
         self.stopStartTime = DocumentDefaultValues.Empty.int
     }
 }
