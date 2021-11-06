@@ -16,6 +16,12 @@ class ListVC: UIViewController {
         configUI()
     }
     
+    //MARK: - viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: animated)
+    }
+    
     //MARK: - configUI
     private func configUI() {
         tableView.register(UINib(nibName: TABLE_VIEW_CELL.ListCell.rawValue, bundle: nil), forCellReuseIdentifier: TABLE_VIEW_CELL.ListCell.rawValue)
