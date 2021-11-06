@@ -42,3 +42,11 @@ struct DocumentDefaultValues{
         static let double = 0.0
     }
 }
+
+//MARK: - TRUCK_RUNNING_STATE
+enum TRUCK_RUNNING_STATE: Int, Encodable{
+    case running = 0
+    case stopped = 1
+    case idle = 2
+    case error = 3
+}
