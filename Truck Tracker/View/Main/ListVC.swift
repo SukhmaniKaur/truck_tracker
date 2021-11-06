@@ -23,5 +23,6 @@ class ListVC: UIViewController {
     
     //MARK: - mapBtnIsPressed
     @IBAction func mapBtnIsPressed(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
