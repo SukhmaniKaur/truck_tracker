@@ -22,3 +22,8 @@ enum MAP_API_KEY: String {
 enum TABLE_VIEW_CELL: String {
     case ListCell
 }
+
+//MARK: - MAIN_STORYBOARD
+enum MAIN_STORYBOARD: String {
+    case MapVC, ListVC
+}

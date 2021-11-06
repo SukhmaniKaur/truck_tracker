@@ -24,5 +24,7 @@ class MapVC: UIViewController {
     
     //MARK: - listBtnIsPressed
     @IBAction func listBtnIsPressed(_ sender: UIBarButtonItem) {
+        let vc: MapVC = STORYBOARD.MAIN.instantiateViewController(identifier: MAIN_STORYBOARD.MapVC.rawValue) as! MapVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
