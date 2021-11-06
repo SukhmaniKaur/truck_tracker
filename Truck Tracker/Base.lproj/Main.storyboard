@@ -20,6 +20,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fz7-UI-VyO" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xjH-U7-yGd"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -32,8 +35,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trucks" id="Uca-Xk-bfh">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="gyI-nG-eKV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="gyI-nG-eKV">
+                            <connections>
+                                <action selector="listBtnIsPressed:" destination="BYZ-38-t0r" id="JuT-Oq-9Gv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Fz7-UI-VyO" id="sQf-ym-agT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
