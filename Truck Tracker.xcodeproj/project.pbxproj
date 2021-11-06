@@ -206,6 +206,8 @@
 				FA7CFD2B273463AE003D996A /* Sources */,
 				FA7CFD2C273463AE003D996A /* Frameworks */,
 				FA7CFD2D273463AE003D996A /* Resources */,
+				B14A0C1A95F3AC177424C8DA /* [CP] Embed Pods Frameworks */,
+				191A62B616B8F0BC0057207F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +245,8 @@
 				FA7CFD4C273463B1003D996A /* Sources */,
 				FA7CFD4D273463B1003D996A /* Frameworks */,
 				FA7CFD4E273463B1003D996A /* Resources */,
+				97BFECDEEBED89D8F8A48F2E /* [CP] Embed Pods Frameworks */,
+				8CCBA2E48487D3514071967A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -366,6 +370,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		191A62B616B8F0BC0057207F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCBA2E48487D3514071967A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97BFECDEEBED89D8F8A48F2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker-Truck TrackerUITests/Pods-Truck Tracker-Truck TrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B14A0C1A95F3AC177424C8DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8203FAF35A575F70CFBC71A /* [CP] Check Pods Manifest.lock */ = {

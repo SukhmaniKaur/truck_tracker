@@ -8,6 +8,7 @@ target 'Truck Tracker' do
   # Pods for Truck Tracker
 
   pod 'SainiUtils'
+  pod 'GoogleMaps', '~> 3.7.0'
   
   target 'Truck TrackerTests' do
     inherit! :search_paths
