@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SainiUtils
 
 class ListCell: UITableViewCell {
 
@@ -24,6 +25,24 @@ class ListCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    var listInfo: TruckListInfo = TruckListInfo() {
+        didSet {
+            vehicleNumberLbl.text = listInfo.truckNumber
+            speedLbl.text = "\(listInfo.lastWaypoint.speed)"
+            lastUpdatedLbl.text = listInfo.lastRunningState.lastRunningTime
+            switch listInfo.lastRunningState.truckRunningState {
+            case .running:
+                speedLbl.isHidden = false
+                kmLbl.isHidden = false
+                movingStateLbl.text = STATIC_LABELS.running.rawValue +  listInfo.lastRunningState.lastRunningTime
+            case .stopped, .idle, .error:
+                kmLbl.isHidden = true
+                speedLbl.isHidden = true
+                movingStateLbl.text = STATIC_LABELS.stopped.rawValue + listInfo.lastRunningState.lastRunningTime
+            }
+        }
     }
     
 }

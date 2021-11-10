@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C1D9D66F9F18FF22CFC6826 /* Pods_Truck_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D283437ADBCAD3CBE12E7FC4 /* Pods_Truck_TrackerTests.framework */; };
 		25A6B2B9CA0848DEEED69B25 /* Pods_Truck_Tracker_Truck_TrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5DBA80BC0A12A9DBC7222C /* Pods_Truck_Tracker_Truck_TrackerUITests.framework */; };
+		FA06535D273C0B210027A5B7 /* AppCredentails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06535C273C0B210027A5B7 /* AppCredentails.swift */; };
 		FA7CFD33273463AE003D996A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CFD32273463AE003D996A /* AppDelegate.swift */; };
 		FA7CFD3A273463AE003D996A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD38273463AE003D996A /* Main.storyboard */; };
 		FA7CFD3C273463B0003D996A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA7CFD3B273463B0003D996A /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 		B931CAF174FB18977C07B316 /* Pods-Truck Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truck Tracker.release.xcconfig"; path = "Target Support Files/Pods-Truck Tracker/Pods-Truck Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		D283437ADBCAD3CBE12E7FC4 /* Pods_Truck_TrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Truck_TrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BA60E06EB37AC0006B5CCC /* Pods-Truck TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Truck TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Truck TrackerTests/Pods-Truck TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA06535C273C0B210027A5B7 /* AppCredentails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCredentails.swift; sourceTree = "<group>"; };
 		FA7CFD2F273463AE003D996A /* Truck Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Truck Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA7CFD32273463AE003D996A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7CFD39273463AE003D996A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				FABF43D52736EC1600DFA9E4 /* API_Manager.swift */,
 				FABF43E92736EE4F00DFA9E4 /* Binding.swift */,
 				FABF43EE2736F0E200DFA9E4 /* Utility.swift */,
+				FA06535C273C0B210027A5B7 /* AppCredentails.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				FABF43E52736EE4300DFA9E4 /* TruckListingViewModel.swift in Sources */,
 				FABF43C72736E32E00DFA9E4 /* ListCell.swift in Sources */,
 				FABF43B12736DABE00DFA9E4 /* MapVC.swift in Sources */,
+				FA06535D273C0B210027A5B7 /* AppCredentails.swift in Sources */,
 				FABF44072736F52E00DFA9E4 /* TruckListReponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
