@@ -80,6 +80,10 @@ class MapVC: UIViewController {
         locationManager?.pausesLocationUpdatesAutomatically = false
     }
     
+    //MARK: - refreshBtnIsPressed
+    @IBAction func refreshBtnIsPressed(_ sender: UIBarButtonItem) {
+    }
+    
     //MARK: - listBtnIsPressed
     @IBAction func listBtnIsPressed(_ sender: UIBarButtonItem) {
         let vc: ListVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: MAIN_STORYBOARD.ListVC.rawValue) as! ListVC

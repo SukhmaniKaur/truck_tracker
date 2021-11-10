@@ -35,11 +35,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trucks" id="Uca-Xk-bfh">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="list" id="gyI-nG-eKV">
-                            <connections>
-                                <action selector="listBtnIsPressed:" destination="BYZ-38-t0r" id="JuT-Oq-9Gv"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="list" id="gyI-nG-eKV">
+                                <connections>
+                                    <action selector="listBtnIsPressed:" destination="BYZ-38-t0r" id="JuT-Oq-9Gv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="refresh" id="mUH-Pd-Y4m">
+                                <connections>
+                                    <action selector="refreshBtnIsPressed:" destination="BYZ-38-t0r" id="ZYi-D0-syK"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="Fz7-UI-VyO" id="sQf-ym-agT"/>
@@ -76,11 +83,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Trucks" id="uvl-Bc-BxI">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="map" id="Uvo-UC-e4f">
-                            <connections>
-                                <action selector="mapBtnIsPressed:" destination="7Qt-G3-cyh" id="Dqk-vP-TbB"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="map" id="Uvo-UC-e4f">
+                                <connections>
+                                    <action selector="mapBtnIsPressed:" destination="7Qt-G3-cyh" id="Dqk-vP-TbB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="refresh" id="NhA-P4-6lU">
+                                <connections>
+                                    <action selector="refreshBtnIsPressed:" destination="7Qt-G3-cyh" id="Ghh-9I-IEt"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ozg-uH-UgS" id="RHA-7E-1Y1"/>
@@ -146,6 +160,7 @@
     <resources>
         <image name="list" width="24" height="24"/>
         <image name="map" width="24" height="24"/>
+        <image name="refresh" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

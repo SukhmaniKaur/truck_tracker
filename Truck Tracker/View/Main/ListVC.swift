@@ -33,6 +33,10 @@ class ListVC: UIViewController {
         tableView.register(UINib(nibName: TABLE_VIEW_CELL.ListCell.rawValue, bundle: nil), forCellReuseIdentifier: TABLE_VIEW_CELL.ListCell.rawValue)
     }
     
+    //MARK: - refreshBtnIsPressed
+    @IBAction func refreshBtnIsPressed(_ sender: UIBarButtonItem) {
+    }
+    
     //MARK: - mapBtnIsPressed
     @IBAction func mapBtnIsPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
