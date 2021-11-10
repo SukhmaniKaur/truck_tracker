@@ -11,10 +11,12 @@ import SainiUtils
 protocol TruckListingDelegate {
     var success: Box<Bool> { get set }
     var truckListArr: Box<[TruckListInfo]> { get set }
+    var searchedListArr: Box<[TruckListInfo]> { get set }
     func fetchTruckInfoList()
 }
 
 struct TruckListingViewModel: TruckListingDelegate {
+    var searchedListArr: Box<[TruckListInfo]> = Box([TruckListInfo]())
     var success: Box<Bool> = Box(Bool())
     var truckListArr: Box<[TruckListInfo]> = Box([TruckListInfo]())
     
@@ -49,4 +51,10 @@ struct TruckListingViewModel: TruckListingDelegate {
         self.truckListArr.value = listArr
     }
     
+    
+    func runningSearch(array: [TruckListInfo], search: String) {
+        self.searchedListArr.value = array.filter({ (string) -> Bool in
+            return string.truckNumber.lowercased().contains(search.lowercased())
+        })
+    }
 }
