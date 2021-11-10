@@ -26,7 +26,7 @@ struct TruckListingViewModel: TruckListingDelegate {
                         let success = try JSONDecoder().decode(TruckListResponse.self, from: response!) // decode the response into model
                         switch success.responseCode.responseCode{
                         case 200:
-                            self.truckListArr.value = success.data
+                            self.calculateLastRunningTime(arr: success.data)
                             self.success.value = true
                             break
                         default:
@@ -39,6 +39,14 @@ struct TruckListingViewModel: TruckListingDelegate {
                 }
             }
         }
+    }
+    
+    func calculateLastRunningTime(arr: [TruckListInfo]) {
+        var listArr = arr
+        for index in 0..<listArr.count {
+            listArr[index].lastRunningState.lastRunningTime = sainiTimesAgo(Double(listArr[index].lastRunningState.stopStartTime / 1000))
+        }
+        self.truckListArr.value = listArr
     }
     
 }

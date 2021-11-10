@@ -13,11 +13,6 @@ struct STORYBOARD {
     static let MAIN = UIStoryboard(name: "Main", bundle: nil)
 }
 
-//MARK: - MAP_API_KEY
-enum MAP_API_KEY: String {
-    case key = "AIzaSyCCw6-syRJVpK7fFsYOO8BJpfkdh5wId2A"
-}
-
 //MARK: - TABLE_VIEW_CELL
 enum TABLE_VIEW_CELL: String {
     case ListCell
@@ -49,4 +44,10 @@ enum TRUCK_RUNNING_STATE: Int, Encodable{
     case stopped = 0
     case idle = 2
     case error = 3
+}
+
+//MARK: - STATIC_LABELS
+enum STATIC_LABELS: String {
+    case running = "Running since last "
+    case stopped = "Stopped since last "
 }

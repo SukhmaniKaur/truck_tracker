@@ -22,7 +22,7 @@ struct TruckListResponse: Codable {
 // MARK: - TruckListInfo
 struct TruckListInfo: Codable {
     let id: Int
-    let lastRunningState: LastRunningState
+    var lastRunningState: LastRunningState
     let truckNumber: String
     let lastWaypoint: LastWaypoint
 
@@ -40,15 +40,23 @@ struct TruckListInfo: Codable {
         lastRunningState = try values.decodeIfPresent(LastRunningState.self, forKey: .lastRunningState) ?? LastRunningState()
         lastWaypoint = try values.decodeIfPresent(LastWaypoint.self, forKey: .lastWaypoint) ?? LastWaypoint()
     }
+    
+    init() {
+        self.id = DocumentDefaultValues.Empty.int
+        self.lastRunningState = LastRunningState()
+        self.truckNumber = DocumentDefaultValues.Empty.string
+        self.lastWaypoint = LastWaypoint()
+    }
 }
 
 // MARK: - LastRunningState
 struct LastRunningState: Codable {
     var truckRunningState: TRUCK_RUNNING_STATE = .running
-    let stopStartTime: Int
+    var stopStartTime: Int
+    var lastRunningTime: String
 
     enum CodingKeys: String, CodingKey {
-        case truckRunningState, stopStartTime
+        case truckRunningState, stopStartTime, lastRunningTime
     }
     
     init(from decoder: Decoder) throws {
@@ -57,11 +65,13 @@ struct LastRunningState: Codable {
             truckRunningState = TRUCK_RUNNING_STATE(rawValue: state) ?? .running
         }
         stopStartTime = try values.decodeIfPresent(Int.self, forKey: .stopStartTime) ?? DocumentDefaultValues.Empty.int
+        lastRunningTime = try values.decodeIfPresent(String.self, forKey: .lastRunningTime) ?? DocumentDefaultValues.Empty.string
     }
     
     internal init() {
         self.truckRunningState = .running
         self.stopStartTime = DocumentDefaultValues.Empty.int
+        self.lastRunningTime = DocumentDefaultValues.Empty.string
     }
 }
 

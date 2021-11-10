@@ -1,10 +1,9 @@
 //
 //  Binding.swift
-//  BindingMVVM
+//  Truck Tracker
 //
-//  Created by Rohit Saini on 01/03/21.
+//  Created by MACBOOK on 10/11/21.
 //
-
 
 class Box<T> {
     typealias Listener = (T) -> ()
