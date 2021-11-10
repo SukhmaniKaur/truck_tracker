@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import SainiUtils
 
 class ListVC: UIViewController {
+    
+    var truckListVM: TruckListingViewModel = TruckListingViewModel()
 
     // OUTLETS
     @IBOutlet weak var tableView: UITableView!
@@ -37,7 +40,7 @@ class ListVC: UIViewController {
 extension ListVC: UITableViewDelegate, UITableViewDataSource {
     // numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        20
+        return truckListVM.truckListArr.value.count
     }
     
     // heightForRowAt
@@ -48,6 +51,21 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
     // cellForRowAt
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TABLE_VIEW_CELL.ListCell.rawValue, for: indexPath) as? ListCell else { return UITableViewCell() }
+        let listInfo = truckListVM.truckListArr.value[indexPath.row]
+        cell.vehicleNumberLbl.text = listInfo.truckNumber
+        cell.speedLbl.text = "\(listInfo.lastWaypoint.speed)"
+        let days = sainiTimesAgo(Double((listInfo.lastRunningState.stopStartTime)))
+        cell.lastUpdatedLbl.text = days
+        switch listInfo.lastRunningState.truckRunningState {
+        case .running:
+            cell.speedLbl.isHidden = false
+            cell.kmLbl.isHidden = false
+            cell.movingStateLbl.text = "Running since last \(days)"
+        case .stopped, .idle, .error:
+            cell.kmLbl.isHidden = true
+            cell.speedLbl.isHidden = true
+            cell.movingStateLbl.text = "Stopped since last \(days)"
+        }
         return cell
     }    
 }
