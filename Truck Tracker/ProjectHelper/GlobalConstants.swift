@@ -45,8 +45,8 @@ struct DocumentDefaultValues{
 
 //MARK: - TRUCK_RUNNING_STATE
 enum TRUCK_RUNNING_STATE: Int, Encodable{
-    case running = 0
-    case stopped = 1
+    case running = 1
+    case stopped = 0
     case idle = 2
     case error = 3
 }

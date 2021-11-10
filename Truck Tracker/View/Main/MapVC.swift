@@ -77,6 +77,7 @@ class MapVC: UIViewController {
     //MARK: - listBtnIsPressed
     @IBAction func listBtnIsPressed(_ sender: UIBarButtonItem) {
         let vc: ListVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: MAIN_STORYBOARD.ListVC.rawValue) as! ListVC
+        vc.truckListVM = truckListVM
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
