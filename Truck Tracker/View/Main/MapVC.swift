@@ -23,6 +23,12 @@ class MapVC: UIViewController {
         configUI()
     }
     
+    //MARK: - viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
     //MARK: - configUI
     private func configUI() {
         mapView.isMyLocationEnabled = true

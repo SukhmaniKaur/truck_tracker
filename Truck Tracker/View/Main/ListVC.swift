@@ -9,6 +9,7 @@ import UIKit
 
 class ListVC: UIViewController {
     
+    let searchController = UISearchController(searchResultsController: nil)
     var truckListVM: TruckListingViewModel = TruckListingViewModel()
 
     // OUTLETS
@@ -22,10 +23,13 @@ class ListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.setHidesBackButton(true, animated: animated)
+        self.navigationItem.searchController = searchController
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     //MARK: - configUI
     private func configUI() {
+        searchController.delegate = self
         tableView.register(UINib(nibName: TABLE_VIEW_CELL.ListCell.rawValue, bundle: nil), forCellReuseIdentifier: TABLE_VIEW_CELL.ListCell.rawValue)
     }
     
@@ -53,4 +57,9 @@ extension ListVC: UITableViewDelegate, UITableViewDataSource {
         cell.listInfo = truckListVM.truckListArr.value[indexPath.row]
         return cell
     }    
+}
+
+//MARK: - UISearchControllerDelegate
+extension ListVC: UISearchControllerDelegate {
+    
 }
