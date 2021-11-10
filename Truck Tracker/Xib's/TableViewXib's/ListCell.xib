@@ -98,6 +98,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="kmLbl" destination="HUU-TA-DY4" id="jBS-Bf-0NE"/>
                 <outlet property="lastUpdatedLbl" destination="4eb-AU-ehW" id="rkx-MM-9Kc"/>
                 <outlet property="movingStateLbl" destination="a2I-h4-0cY" id="Aaz-mX-krv"/>
                 <outlet property="speedLbl" destination="L7M-EU-4dg" id="oBa-F0-Pm7"/>

@@ -10,6 +10,7 @@ import UIKit
 class ListCell: UITableViewCell {
 
     // OUTLETS
+    @IBOutlet weak var kmLbl: UILabel!
     @IBOutlet weak var speedLbl: UILabel!
     @IBOutlet weak var lastUpdatedLbl: UILabel!
     @IBOutlet weak var movingStateLbl: UILabel!
