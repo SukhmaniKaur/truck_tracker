@@ -31,10 +31,21 @@ class ListVC: UIViewController {
     private func configUI() {
         searchController.delegate = self
         tableView.register(UINib(nibName: TABLE_VIEW_CELL.ListCell.rawValue, bundle: nil), forCellReuseIdentifier: TABLE_VIEW_CELL.ListCell.rawValue)
+        
+        truckListVM.truckListArr.bind { [weak self](_) in
+            guard let `self` = self else { return }
+            if !self.truckListVM.truckListArr.value.isEmpty {
+                print("Updated in ListVC truckListArr")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     //MARK: - refreshBtnIsPressed
     @IBAction func refreshBtnIsPressed(_ sender: UIBarButtonItem) {
+        truckListVM.fetchTruckInfoList()
     }
     
     //MARK: - mapBtnIsPressed

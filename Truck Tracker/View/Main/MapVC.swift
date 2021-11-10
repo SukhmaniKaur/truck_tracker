@@ -38,6 +38,15 @@ class MapVC: UIViewController {
         truckListVM.success.bind { [weak self](_) in
             guard let `self` = self else { return }
             if self.truckListVM.success.value {
+                print("Updated in MApVC")
+                self.markerSetUp()
+            }
+        }
+        
+        truckListVM.truckListArr.bind { [weak self](_) in
+            guard let `self` = self else { return }
+            if !self.truckListVM.truckListArr.value.isEmpty {
+                print("Updated in MApVC truckListArr")
                 self.markerSetUp()
             }
         }
@@ -82,6 +91,7 @@ class MapVC: UIViewController {
     
     //MARK: - refreshBtnIsPressed
     @IBAction func refreshBtnIsPressed(_ sender: UIBarButtonItem) {
+        truckListVM.fetchTruckInfoList()
     }
     
     //MARK: - listBtnIsPressed
