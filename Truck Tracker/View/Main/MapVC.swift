@@ -42,21 +42,19 @@ class MapVC: UIViewController {
                 self.markerSetUp()
             }
         }
-        
-        truckListVM.truckListArr.bind { [weak self](_) in
-            guard let `self` = self else { return }
-            if !self.truckListVM.truckListArr.value.isEmpty {
-                print("Updated in MApVC truckListArr")
-                self.markerSetUp()
-            }
-        }
     }
     
     //MARK: -  markerSetUp
     func markerSetUp() {
         self.mapView.clear()
-        truckListVM.truckListArr.value.forEach { (loc) in
-            addMarkersOnMap(lat: loc.lastWaypoint.lat, long: loc.lastWaypoint.lng, data: loc)
+        if !truckListVM.searchedListArr.value.isEmpty {
+            truckListVM.searchedListArr.value.forEach { (loc) in
+                addMarkersOnMap(lat: loc.lastWaypoint.lat, long: loc.lastWaypoint.lng, data: loc)
+            }
+        } else {
+            truckListVM.truckListArr.value.forEach { (loc) in
+                addMarkersOnMap(lat: loc.lastWaypoint.lat, long: loc.lastWaypoint.lng, data: loc)
+            }
         }
     }
     
@@ -91,6 +89,8 @@ class MapVC: UIViewController {
     
     //MARK: - refreshBtnIsPressed
     @IBAction func refreshBtnIsPressed(_ sender: UIBarButtonItem) {
+        truckListVM.searchedListArr.value.removeAll()
+        truckListVM.truckListArr.value.removeAll()
         truckListVM.fetchTruckInfoList()
     }
     
@@ -98,7 +98,17 @@ class MapVC: UIViewController {
     @IBAction func listBtnIsPressed(_ sender: UIBarButtonItem) {
         let vc: ListVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: MAIN_STORYBOARD.ListVC.rawValue) as! ListVC
         vc.truckListVM = truckListVM
+        vc.updateListDelegate = self
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+//MARK: - UpdateMapListDelegate
+extension MapVC: UpdateMapListDelegate {
+    func updateListOnSearch(updatedArr: [TruckListInfo]) {
+        print("Delegate called")
+        self.truckListVM.searchedListArr.value = updatedArr
+        self.markerSetUp()
     }
 }
 
